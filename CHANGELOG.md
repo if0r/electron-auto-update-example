@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/if0r/electron-auto-update-example/compare/v1.0.3...v1.1.0) (2023-05-19)
+
+
+### Features
+
+* dialog version ([48382b9](https://github.com/if0r/electron-auto-update-example/commit/48382b938ccc058e921cf749552e14dd3019fa27))
+
 ### [1.0.3](https://github.com/if0r/electron-auto-update-example/compare/v1.0.2...v1.0.3) (2023-05-19)
 
 
