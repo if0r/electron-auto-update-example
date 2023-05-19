@@ -26,6 +26,7 @@
   </style>
 </head>
 <body>
+  <p id="version2"></p>
   <h1>Electron Auto Update Example</h1>
   <p id="version"></p>
   <div id="notification" class="hidden">
@@ -38,12 +39,16 @@
     </button>
   </div>
   <script>
-    const { ipcRenderer } = require('electron');
+    const { ipcRenderer, remote } = require('electron');
     const version = document.getElementById('version');
+    const version2 = document.getElementById('version2');
     const notification = document.getElementById('notification');
     const message = document.getElementById('message');
     const restartButton = document.getElementById('restart-button');
+    const appVersion = remote.app.getVersion()
     
+    version2.innerText = 'Version ' + appVersion;
+
     ipcRenderer.send('app_version');
     ipcRenderer.on('app_version', (event, arg) => {
       ipcRenderer.removeAllListeners('app_version');

@@ -42,8 +42,6 @@ jobs:
         run: |
           yarn build
           ls dist/
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} 
           
       # step6: upload artifacts
       # - name: upload artifacts

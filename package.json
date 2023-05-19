@@ -1,7 +1,7 @@
 {
   "name": "electron-auto-update-example",
   "version": "1.0.2",
-  "description": "",
+  "description": "自動更新的electron範例",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
   },
-  "author": "",
+  "author": "abc",
   "license": "ISC",
   "devDependencies": {
     "electron": "^24.3.1",

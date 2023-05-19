@@ -16,6 +16,7 @@ function createWindow () {
     mainWindow = null;
   });
   mainWindow.once('ready-to-show', () => {
+    autoUpdater.setFeedURL('http://192.168.1.79:8080/updater/') 
     autoUpdater.checkForUpdatesAndNotify();
   });
 }
