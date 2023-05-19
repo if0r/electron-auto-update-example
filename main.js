@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const { autoUpdater } = require('electron-updater');
 
 let mainWindow;
@@ -18,6 +18,11 @@ function createWindow () {
   mainWindow.once('ready-to-show', () => {
     autoUpdater.setFeedURL('http://192.168.1.79:8080/updater/') 
     autoUpdater.checkForUpdatesAndNotify();
+    dialog.showMessageBox({
+      type: 'info',
+      title: 'getVersion',
+      message: app.getVersion()
+    })
   });
 }
 
